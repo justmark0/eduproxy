@@ -1,5 +1,9 @@
 version: '3'
 services:
+  jucie:
+    image: bkimminich/juice-shop:latest
+    ports:
+      - 3000
   proxy:
     build: .
     ports:

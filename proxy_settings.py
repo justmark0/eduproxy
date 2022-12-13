@@ -15,7 +15,7 @@ class Addon:
         with open("response.txt", "a") as f:
             f.write(str(datetime.datetime.now()) + " " + flow.request.pretty_url + "\n")
 
-        # Block XSS in search bar
+        # Block XSS in review of product
         if 'script' in flow.request.pretty_url or \
                 flow.request.pretty_url.split('?') == "/search":
             flow.response.set_text('f@ck u hacker')
